@@ -20,5 +20,5 @@ if (mysqli_query($link, $sql)) {
   echo "Ошибка: " . $sql . "<br>" . mysqli_error($link);
   echo "Ошибка: " . $sql . "<br>" . mysqli_error($link);
 }
-header('Location:site.html');
+header('Location:site.php');
 ?>
