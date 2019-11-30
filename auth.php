@@ -25,5 +25,5 @@ exit();
  setcookie('login', $user['login'], time() + 604800, "/");
  setcookie('admin', $user['admin'], time() + 604800, "/");
  $mysql->close();
- header('Location:site.html');
+ header('Location:site.php');
 ?>
