@@ -21,33 +21,34 @@ if ($_COOKIE['user']=='');
 </tr>
 <tr>
 <td style="background-color:#F0E68C">Птицы</td>
-<td style="background-color:#F0E68C"><a href="bird.php"></a>Перейти</td>
+<td style="background-color:#F0E68C"><a href="bird.html">Перейти</a></td>
 </tr>
 <tr>
 <td style="background-color:#808000">Пресмыкающиеся</td>
-<td style="background-color:#808000"><a href="reptile.php"></a>Перейти</td>
+<td style="background-color:#808000"><a href="reptile.html">Перейти</a></td>
 </tr>
 <tr>
 <td style="background-color:#006400">Земноводные</td>
-<td style="background-color:#006400"><a href="amfi.php"></a>Перейти</td>
+<td style="background-color:#006400"><a href="amfi.html">Перейти</a></td>
 </tr>
 <tr>
 <td style="background-color:#20B2AA">Рыбы</td>
-<td style="background-color:#20B2AA"><a href="fish.php"></a>Перейти</td>
+<td style="background-color:#20B2AA"><a href="fish.html">Перейти</a></td>
 </tr>
 <tr>
 <td style="background-color:#1E90FF">Моллюски</td>
-<td style="background-color:#1E90FF"><a href="moll.php"></a>Перейти</td>
+<td style="background-color:#1E90FF"><a href="moll.html">Перейти</a></td>
 </tr>
 <tr>
 <td style="background-color:#8B4513">Насекомые</td>
-<td style="background-color:#8B4513"><a href="insect.php"></a>Перейти</td>
+<td style="background-color:#8B4513"><a href="insect.html">Перейти</a></td>
 </tr>
 <tr>
 <td style="background-color:#FFF0F5">Простейшие</td>
-<td style="background-color:#FFF0F5"><a href="simple.php"></a>Перейти</td>
+<td style="background-color:#FFF0F5"><a href="simple.html">Перейти</a></td>
 </tr>
 </table>
 <h3>Разработано ИУ4-11Б</h3>
 </body>
 </html>
+
