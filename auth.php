@@ -7,23 +7,28 @@ $host="localhost";
 $user="root";
 $password="Vika_06012001";
 $database="reg";
-$link=mysqli_connect($host, $user, $password, $database);
+$link=new mysqli($host, $user, $password, $database);
 if (!$link) {
     die('Could not connect: ' . mysql_error());
 }
 echo 'Connected successfully';
+echo"<br>";
 $result = $link->query("SELECT * FROM `users` WHERE `login`='$login' AND `pass`='$pass'");
 $user = $result->fetch_assoc();
+if ($user['admin']=='10'){echo("admin");
+echo "<br>";
+header('Location:sitesu.html');
+}
+if ($user['admin']=='1'){echo("notadmin");
+echo "<br>";
+header('Location:site.php');}
 error_reporting(0);
 if(count($user) == 0) {
 echo "Неверно введённый логин и/или пароль!";
 echo '<p><a href="reg.html">'."Вернуться на главную страницу".'</a></p>';
 exit();
  }
- 
- setcookie('user', $user['name'], time() + 604800, "/");
- setcookie('login', $user['login'], time() + 604800, "/");
+ setcookie('login', $user['login'], time() + 60*60*2, "/");
  setcookie('admin', $user['admin'], time() + 604800, "/");
- $mysql->close();
- header('Location:site.php');
+ $link->close();
 ?>
