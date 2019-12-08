@@ -22,6 +22,9 @@ header('Location:sitesu.html');
 if ($user['admin']=='1'){echo("notadmin");
 echo "<br>";
 header('Location:site.php');}
+if ($user['admin']=='9') {echo ("moder");
+echo "<br>";
+header ('Location:moder.html');
 error_reporting(0);
 if(count($user) == 0) {
 echo "Неверно введённый логин и/или пароль!";
@@ -30,5 +33,6 @@ exit();
  }
  setcookie('login', $user['login'], time() + 60*60*2, "/");
  setcookie('admin', $user['admin'], time() + 604800, "/");
+ setcookie('moder', $user['moder'], time() +604800, "/");
  $link->close();
 ?>
