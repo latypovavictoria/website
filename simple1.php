@@ -28,6 +28,27 @@
 направлению к источнику раздражения либо в противоположную сторону. Такие реакции называют 
 таксисами.</li>
 </ol>
+ <?php
+$servername = "localhost"; 
+$username = "root";
+$password = "Vika_06012001";
+$dbname = "animal";
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+if (!$conn) {
+   die("Ошибка подключения: " . mysqli_connect_error());
+}
+$sql = "SELECT text FROM animal7";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+   while($row = mysqli_fetch_assoc($result)) {
+       echo "" . $row["text"]."<br>";
+   }
+} else {
+   echo "0 результат";
+}
+mysqli_close($conn);
+?>
 <p1>Вот некоторые из простейших</p1>
 <img src="s1.jpg" width="200"; height="200"><br>
 <img src="s2.jpg" width="200"; height="200"><br>
