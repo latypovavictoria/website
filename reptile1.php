@@ -19,6 +19,27 @@
 В новых условиях преимущество получили те земноводные, которые не имели тесной связи с водой. 
 От таких древних земноводных и произошли первые пресмыкающиеся.</li>
 </ol>
+  <?php
+$servername = "localhost"; 
+$username = "root";
+$password = "Vika_06012001";
+$dbname = "animal";
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+if (!$conn) {
+   die("Ошибка подключения: " . mysqli_connect_error());
+}
+$sql = "SELECT text FROM animal2";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+   while($row = mysqli_fetch_assoc($result)) {
+       echo "" . $row["text"]."<br>";
+   }
+} else {
+   echo "0 результат";
+}
+mysqli_close($conn);
+?>
 <p1>Вот некоторые из пресмыкающихся</p1>
 <img src="lizard.jpg" width="200"; height="200"><br>
 <img src="croc.jpg" width="200"; height="200"><br>
