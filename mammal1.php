@@ -2,10 +2,28 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="mammal.css">
+<style>
+* {background-color:#FFF8DC;
+}
+h1 { background-color:#FFE4C4; text-align: center;
+}
+.mmm {border:2px solid #ADD8E6; height:250px; width:200px; display:block;
+}
+.nnn {text-align:left;
+}
+.ppp {text-align:center;
+}
+h2 { color:#D2691E; text-align:center;
+}
+h3 {text-align:center; background-color:#3CB371;
+}
+</style>
 </head>
 <body>
 <h1>Млекопитающие</h1>
+<h1 style="background: url(nice.jpg); height:200px; width:1500px; text-align:left; color:#228B22; padding:0px, 0px, 0px; margin:0px, 0px, 0px">Animals</h1>
+<h2>Немного о млекопитающих</h2>
+<div class="nnn">
 <p>Млекопитающие — наиболее высокоорганизованный класс позвоночных животных. 
 Основные прогрессивные черты класса млекопитающих следующие:</p>
 <ol>
@@ -34,7 +52,8 @@
 есть виды летающие, полуводные, водные и, наконец, виды, заселяющие толщу почвы. 
 Общее число видов современных млекопитающих равно примерно 4 тыс.</li>
 </ol>
-  <?php
+</div>
+<?php
 $servername = "localhost"; 
 $username = "root";
 $password = "Vika_06012001";
@@ -55,12 +74,30 @@ if (mysqli_num_rows($result) > 0) {
 }
 mysqli_close($conn);
 ?>
-<p1>Вот некоторые из млекопитающих</p1>
-<img src="giraffe.jpg" width="200"; height="200"><br>
-<img src="tiger.jpg" width="200"; height="200"><br>
-<img src="whale.jpg" width="200"; height="200"><br>
-<img src="zebra.jpg" width="200"; height="200"><br>
-<p><a href="comments.php" style="padding: 10px 10px;">Отзывы</a></p>
+<div class="ppp">
+<p style="color:#D2691E; text-align:center">Вот некоторые из млекопитающих</p>
+<table style="border:3px solid #D2691E; margin:auto">
+<tr>
+<td><img src="giraffe.jpg" width="500"; height="500"></td>
+<td><img src="tiger.jpg" width="500"; height="500"></td>
+<tr><td><img src="whale.jpg" width="500"; height="500"></td>
+<td><img src="zebra.jpg" width="500"; height="500"></td>
+</tr></table>
+</div>
+<div class="mmm">
+<p style="color:#228B22; margin:10px; padding:10px">Животные</p>
+<ul>
+<li><a href="mammal1.php">Млекопитающие</a></li>
+<li><a href="bird1.php">Птицы</a></li>
+<li><a href="reptile1.php">Пресмыкающиеся</a></li>
+<li><a href="amfi1.php">Земноводные</a></li>
+<li><a href="fish1.php">Рыбы</a></li>
+<li><a href="moll1.php">Моллюски</a></li>
+<li><a href="insect1.php">Насекомые</a></li>
+<li><a href="simple1.php">Простейшие</a></li>
+<li><a style="color:green" href="site.php">Вернуться на главную</a></li>
+</ul>
+</div>
 <h3>Разработано ИУ4-11Б</h3>
 </body>
 </html>
