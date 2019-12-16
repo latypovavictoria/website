@@ -1,11 +1,20 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="fish.css">
+<style>
+* {background-color:#F0F8FF;
+}
+.mmm {border:2px solid #ADD8E6; height:250px; width:200px; display:block;
+}
+h1 {background-color:#008080; text-align:center;
+}
+</style>
 </head>
 <body>
 <h1>Рыбы</h1>
+<h1 style="background: url(nice.jpg); height:200px; width:1500px; text-align:left; color:#228B22; padding:0px, 0px, 0px; margin:0px, 0px, 0px">Animals</h1>
 <p>Рыбы — самая многочисленная группа позвоночных животных (около  30  тыс. видов). 
 Рыбы — постоянные обитатели водной среды. Они населяют почти все водоёмы Земли: от ручьёв до 
 океанов. С жизнью в воде связаны многие особенности их строения.</p>
@@ -30,7 +39,6 @@
 хрящевых рыб наблюдается внутреннее оплодотворение и живорождение. При этом также количество 
 потомства небольшое.</li>
 </ol>
-<p1>Вот некоторые из рыб</p1>
 <?php
 $servername = "localhost"; 
 $username = "root";
@@ -52,9 +60,26 @@ if (mysqli_num_rows($result) > 0) {
 }
 mysqli_close($conn);
 ?>
-<img src="fish1.jpg" width="200"; height="200"><br>
-<img src="skat.jpg" width="200"; height="200"><br>
-<img src="shark.jpg" width="200"; height="200"><br>
-<h3>Разработано ИУ4-11Б</h3>
+<p style="color:#008B8B; text-align:center">Вот некоторые из рыб</p>
+<table style="border:2px solid #20B2AA; margin:auto"><tr><td>
+<img src="fish1.jpg" width="900"; height="500"></td></tr><tr><td>
+<img src="skat.jpg" width="900"; height="500"></td><tr><td>
+<img src="shark.jpg" width="900"; height="500"></td></tr>
+</table>
+<div class="mmm">
+<p style="color:#228B22; margin:10px; padding:10px">Животные</p>
+<ul>
+<li><a href="mammal1.php">Млекопитающие</a></li>
+<li><a href="bird1.php">Птицы</a></li>
+<li><a href="reptile1.php">Пресмыкающиеся</a></li>
+<li><a href="amfi1.php">Земноводные</a></li>
+<li><a href="fish1.php">Рыбы</a></li>
+<li><a href="moll1.php">Моллюски</a></li>
+<li><a href="insect1.php">Насекомые</a></li>
+<li><a href="simple1.php">Простейшие</a></li>
+<li><a style="color:#228B22" href="site.php">Веpнуться на главную</a></li>
+</ul>
+</div>
+<h3 style="background-color:#3CB371; text-align:center">Разработано ИУ4-11Б</h3>
 </body>
 </html>
