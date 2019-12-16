@@ -2,10 +2,18 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="moll.css">
+<style>
+* {background-color:#F8F8FF;
+}
+.mmm {border:2px solid #ADD8E6; height:250px; width:200px; display:block;
+}
+h1 {background-color:#87CEFA; text-align:center;
+}
+</style>
 </head>
 <body>
 <h1>Моллюски</h1>
+<h1 style="background: url(nice.jpg); height:200px; width:1500px; text-align:left; color:#228B22; padding:0px, 0px, 0px; margin:0px, 0px, 0px">Animals</h1>
 <p>Моллюски (или Мягкотелые) — один из самых крупных Типов животных. Известно свыше  130 
 тысяч видов моллюсков. Моллюски обитают в морях, пресных водах, на суше. Некоторые паразитируют 
 на других животных.</p>
@@ -56,9 +64,26 @@ if (mysqli_num_rows($result) > 0) {
 }
 mysqli_close($conn);
 ?>
-<img src="moll1.jpg" width="200"; height="200"><br>
-<img src="moll2.jpg" width="200"; height="200"><br>
-<img src="snail.jpg" width="200"; height="200"><br>
-<h3>Разработано ИУ4-11Б</h3>
+<p style="color:#00BFFF; text-align:center">Вот некоторые из моллюсков</p>
+<table style="border: 2px solid #00BFFF; margin:auto"><tr><td>
+<img src="moll1.jpg" width="900"; height="500"></td></tr><tr><td>
+<img src="moll2.jpg" width="900"; height="500"></td></tr><tr><td>
+<img src="snail.jpg" width="900"; height="500"></td></tr>
+</table>
+<div class="mmm">
+<p style="color:#228B22; margin:10px; padding:10px">Животные</p>
+<ul>
+<li><a href="mammal1.php">Млекопитающие</a></li>
+<li><a href="bird1.php">Птицы</a></li>
+<li><a href="reptile1.php">Пресмыкающиеся</a></li>
+<li><a href="amfi1.php">Земноводные</a></li>
+<li><a href="fish1.php">Рыбы</a></li>
+<li><a href="moll1.php">Моллюски</a></li>
+<li><a href="insect1.php">Насекомые</a></li>
+<li><a href="simple1.php">Простейшие</a></li>
+<li><a style="color:#228B22" href="site.php">Веpнуться на главную</a></li>
+</ul>
+</div>
+<h3 style="background-color:#3CB371; text-align:center">Разработано ИУ4-11Б</h3>
 </body>
 </html>
