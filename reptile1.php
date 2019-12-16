@@ -2,10 +2,18 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="reptile.css">
+<style>
+* {background-color:#F0FFF0;
+}
+.mmm {border:2px solid #ADD8E6; height:250px; width:200px; display:block;
+}
+h1 {background-color:#6B8E23; text-align:center;
+}
+</style>
 </head>
 <body>
 <h1>Пресмыкающиеся</h1>
+<h1 style="background: url(nice.jpg); height:200px; width:1500px; text-align:left; color:#228B22; padding:0px, 0px, 0px; margin:0px, 0px, 0px">Animals</h1>
 <p>Класс Пресмыкающиеся, или Рептилии, насчитывает около  6  тыс. видов. Это настоящие наземные 
 животные, которые в отличие от Земноводных не имеют тесной связи с водой</p>
 <li>Тело пресмыкающихся разделено на отделы — голову, туловище, хвост и две пары конечностей. 
@@ -19,7 +27,7 @@
 В новых условиях преимущество получили те земноводные, которые не имели тесной связи с водой. 
 От таких древних земноводных и произошли первые пресмыкающиеся.</li>
 </ol>
-  <?php
+<?php
 $servername = "localhost"; 
 $username = "root";
 $password = "Vika_06012001";
@@ -40,12 +48,27 @@ if (mysqli_num_rows($result) > 0) {
 }
 mysqli_close($conn);
 ?>
-<p1>Вот некоторые из пресмыкающихся</p1>
-<img src="lizard.jpg" width="200"; height="200"><br>
-<img src="croc.jpg" width="200"; height="200"><br>
-<img src="snake.jpg" width="200"; height="200"><br>
-<img src="tort.jpg" width="200"; height="200"><br>
-<p><a href="comment.php" style="padding: 10px 10px;">Отзывы</a></p>
-<h3>Разработано ИУ4-11Б</h3>
+<p style="color:#6B8E23; text-align:center">Вот некоторые из пресмыкающихся</p>
+<table style="border:2px solid #808000; margin:auto"><tr><td>
+<img src="lizard.jpg" width="500"; height="500"></td>
+<td><img src="croc.jpg" width="500"; height="500"></td><tr><td>
+<img src="snake.jpg" width="500"; height="500"></td><td>
+<img src="tort.jpg" width="500"; height="500"><td></tr>
+</table>
+<div class="mmm">
+<p style="color:#228B22; margin:10px; padding:10px">Животные</p>
+<ul>
+<li><a href="mammal1.php">Млекопитающие</a></li>
+<li><a href="bird1.php">Птицы</a></li>
+<li><a href="reptile1.php">Пресмыкающиеся</a></li>
+<li><a href="amfi1.php">Земноводные</a></li>
+<li><a href="fish1.php">Рыбы</a></li>
+<li><a href="moll1.php">Моллюски</a></li>
+<li><a href="insect1.php">Насекомые</a></li>
+<li><a href="simple1.php">Простейшие</a></li>
+<li><a style="color:#228B22" href="site.php">Веpнуться на главную</a></li>
+</ul>
+</div>
+<h3 style="background-color:#3CB371; text-align:center">Разработано ИУ4-11Б</h3>
 </body>
 </html>
